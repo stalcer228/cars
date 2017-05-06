@@ -73,5 +73,23 @@ namespace carsdb
             Owner fd = new Owner();
             fd.ShowDialog();
         }
+
+        private void клиентToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Client fd = new Client();
+            fd.ShowDialog();
+        }
+
+        private void графикВозвратаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Schedule fd = new Schedule();
+            fd.ShowDialog();
+        }
+
+        private void выдачаАвтомобилейToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Delivery fd = new Delivery();
+            fd.ShowDialog();
+        }
     }
 }

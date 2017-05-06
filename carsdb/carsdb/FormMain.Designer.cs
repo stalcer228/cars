@@ -44,6 +44,9 @@
             this.арендодательTableAdapter = new carsdb.carsDataSetTableAdapters.АрендодательTableAdapter();
             this.tableAdapterManager = new carsdb.carsDataSetTableAdapters.TableAdapterManager();
             this.арендодательToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.клиентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.графикВозвратаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выдачаАвтомобилейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripMain.SuspendLayout();
             this.toolStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carsDataSet)).BeginInit();
@@ -56,10 +59,13 @@
             this.файлToolStripMenuItem,
             this.справочникиToolStripMenuItem,
             this.автомобильToolStripMenuItem,
-            this.арендодательToolStripMenuItem});
+            this.арендодательToolStripMenuItem,
+            this.клиентToolStripMenuItem,
+            this.графикВозвратаToolStripMenuItem,
+            this.выдачаАвтомобилейToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(453, 24);
+            this.menuStripMain.Size = new System.Drawing.Size(642, 24);
             this.menuStripMain.TabIndex = 0;
             this.menuStripMain.Text = "menuStrip1";
             // 
@@ -104,7 +110,7 @@
             this.toolStripButton2});
             this.toolStripMain.Location = new System.Drawing.Point(0, 24);
             this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.Size = new System.Drawing.Size(453, 25);
+            this.toolStripMain.Size = new System.Drawing.Size(642, 25);
             this.toolStripMain.TabIndex = 1;
             this.toolStripMain.Text = "toolStrip1";
             // 
@@ -166,11 +172,32 @@
             this.арендодательToolStripMenuItem.Text = "Арендодатель";
             this.арендодательToolStripMenuItem.Click += new System.EventHandler(this.арендодательToolStripMenuItem_Click);
             // 
+            // клиентToolStripMenuItem
+            // 
+            this.клиентToolStripMenuItem.Name = "клиентToolStripMenuItem";
+            this.клиентToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.клиентToolStripMenuItem.Text = "Клиент";
+            this.клиентToolStripMenuItem.Click += new System.EventHandler(this.клиентToolStripMenuItem_Click);
+            // 
+            // графикВозвратаToolStripMenuItem
+            // 
+            this.графикВозвратаToolStripMenuItem.Name = "графикВозвратаToolStripMenuItem";
+            this.графикВозвратаToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.графикВозвратаToolStripMenuItem.Text = "График возврата";
+            this.графикВозвратаToolStripMenuItem.Click += new System.EventHandler(this.графикВозвратаToolStripMenuItem_Click);
+            // 
+            // выдачаАвтомобилейToolStripMenuItem
+            // 
+            this.выдачаАвтомобилейToolStripMenuItem.Name = "выдачаАвтомобилейToolStripMenuItem";
+            this.выдачаАвтомобилейToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            this.выдачаАвтомобилейToolStripMenuItem.Text = "Выдача автомобилей";
+            this.выдачаАвтомобилейToolStripMenuItem.Click += new System.EventHandler(this.выдачаАвтомобилейToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(453, 195);
+            this.ClientSize = new System.Drawing.Size(642, 195);
             this.Controls.Add(this.toolStripMain);
             this.Controls.Add(this.menuStripMain);
             this.MainMenuStrip = this.menuStripMain;
@@ -205,6 +232,9 @@
         private carsDataSetTableAdapters.АрендодательTableAdapter арендодательTableAdapter;
         private carsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.ToolStripMenuItem арендодательToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem клиентToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem графикВозвратаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem выдачаАвтомобилейToolStripMenuItem;
     }
 }
 

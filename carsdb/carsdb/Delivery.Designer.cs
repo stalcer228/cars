@@ -1,6 +1,6 @@
 ﻿namespace carsdb
 {
-    partial class Owner
+    partial class Delivery
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Owner));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Delivery));
             this.carsDataSet = new carsdb.carsDataSet();
-            this.арендодательBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.арендодательTableAdapter = new carsdb.carsDataSetTableAdapters.АрендодательTableAdapter();
+            this.выдача_автомобилейBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.выдача_автомобилейTableAdapter = new carsdb.carsDataSetTableAdapters.Выдача_автомобилейTableAdapter();
             this.tableAdapterManager = new carsdb.carsDataSetTableAdapters.TableAdapterManager();
-            this.арендодательBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.выдача_автомобилейBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -46,17 +46,19 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.арендодательBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.арендодательDataGridView = new System.Windows.Forms.DataGridView();
+            this.выдача_автомобилейBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.выдача_автомобилейDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.carsDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.арендодательBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.арендодательBindingNavigator)).BeginInit();
-            this.арендодательBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.арендодательDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.выдача_автомобилейBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.выдача_автомобилейBindingNavigator)).BeginInit();
+            this.выдача_автомобилейBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.выдача_автомобилейDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // carsDataSet
@@ -64,33 +66,32 @@
             this.carsDataSet.DataSetName = "carsDataSet";
             this.carsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // арендодательBindingSource
+            // выдача_автомобилейBindingSource
             // 
-            this.арендодательBindingSource.DataMember = "Арендодатель";
-            this.арендодательBindingSource.DataSource = this.carsDataSet;
+            this.выдача_автомобилейBindingSource.DataMember = "Выдача автомобилей";
+            this.выдача_автомобилейBindingSource.DataSource = this.carsDataSet;
             // 
-            // арендодательTableAdapter
+            // выдача_автомобилейTableAdapter
             // 
-            this.арендодательTableAdapter.ClearBeforeFill = true;
+            this.выдача_автомобилейTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.UpdateOrder = carsdb.carsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.АвтомобильTableAdapter = null;
-            this.tableAdapterManager.АрендодательTableAdapter = this.арендодательTableAdapter;
-            this.tableAdapterManager.Выдача_автомобилейTableAdapter = null;
+            this.tableAdapterManager.АрендодательTableAdapter = null;
+            this.tableAdapterManager.Выдача_автомобилейTableAdapter = this.выдача_автомобилейTableAdapter;
             this.tableAdapterManager.График_возвратаTableAdapter = null;
             this.tableAdapterManager.КлиентTableAdapter = null;
             // 
-            // арендодательBindingNavigator
+            // выдача_автомобилейBindingNavigator
             // 
-            this.арендодательBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.арендодательBindingNavigator.BindingSource = this.арендодательBindingSource;
-            this.арендодательBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.арендодательBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.арендодательBindingNavigator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.арендодательBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.выдача_автомобилейBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.выдача_автомобилейBindingNavigator.BindingSource = this.выдача_автомобилейBindingSource;
+            this.выдача_автомобилейBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.выдача_автомобилейBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.выдача_автомобилейBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -102,17 +103,17 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.арендодательBindingNavigatorSaveItem});
-            this.арендодательBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.арендодательBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.арендодательBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.арендодательBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.арендодательBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.арендодательBindingNavigator.Name = "арендодательBindingNavigator";
-            this.арендодательBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.арендодательBindingNavigator.Size = new System.Drawing.Size(442, 290);
-            this.арендодательBindingNavigator.TabIndex = 0;
-            this.арендодательBindingNavigator.Text = "bindingNavigator1";
+            this.выдача_автомобилейBindingNavigatorSaveItem});
+            this.выдача_автомобилейBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.выдача_автомобилейBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.выдача_автомобилейBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.выдача_автомобилейBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.выдача_автомобилейBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.выдача_автомобилейBindingNavigator.Name = "выдача_автомобилейBindingNavigator";
+            this.выдача_автомобилейBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.выдача_автомобилейBindingNavigator.Size = new System.Drawing.Size(643, 25);
+            this.выдача_автомобилейBindingNavigator.TabIndex = 0;
+            this.выдача_автомобилейBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -120,7 +121,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 287);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -129,13 +130,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 287);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 290);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -149,14 +150,14 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 287);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 290);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -164,7 +165,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 287);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -173,13 +174,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 287);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 290);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -187,7 +188,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 287);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
             // 
             // bindingNavigatorDeleteItem
@@ -196,75 +197,89 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 287);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
             this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
-            // арендодательBindingNavigatorSaveItem
+            // выдача_автомобилейBindingNavigatorSaveItem
             // 
-            this.арендодательBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.арендодательBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("арендодательBindingNavigatorSaveItem.Image")));
-            this.арендодательBindingNavigatorSaveItem.Name = "арендодательBindingNavigatorSaveItem";
-            this.арендодательBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 287);
-            this.арендодательBindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.арендодательBindingNavigatorSaveItem.Click += new System.EventHandler(this.арендодательBindingNavigatorSaveItem_Click);
+            this.выдача_автомобилейBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.выдача_автомобилейBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("выдача_автомобилейBindingNavigatorSaveItem.Image")));
+            this.выдача_автомобилейBindingNavigatorSaveItem.Name = "выдача_автомобилейBindingNavigatorSaveItem";
+            this.выдача_автомобилейBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.выдача_автомобилейBindingNavigatorSaveItem.Text = "Сохранить данные";
+            this.выдача_автомобилейBindingNavigatorSaveItem.Click += new System.EventHandler(this.выдача_автомобилейBindingNavigatorSaveItem_Click);
             // 
-            // арендодательDataGridView
+            // выдача_автомобилейDataGridView
             // 
-            this.арендодательDataGridView.AutoGenerateColumns = false;
-            this.арендодательDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.арендодательDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.выдача_автомобилейDataGridView.AutoGenerateColumns = false;
+            this.выдача_автомобилейDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.выдача_автомобилейDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.арендодательDataGridView.DataSource = this.арендодательBindingSource;
-            this.арендодательDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.арендодательDataGridView.Location = new System.Drawing.Point(0, 0);
-            this.арендодательDataGridView.Name = "арендодательDataGridView";
-            this.арендодательDataGridView.Size = new System.Drawing.Size(442, 290);
-            this.арендодательDataGridView.TabIndex = 1;
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.выдача_автомобилейDataGridView.DataSource = this.выдача_автомобилейBindingSource;
+            this.выдача_автомобилейDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.выдача_автомобилейDataGridView.Location = new System.Drawing.Point(0, 25);
+            this.выдача_автомобилейDataGridView.Name = "выдача_автомобилейDataGridView";
+            this.выдача_автомобилейDataGridView.Size = new System.Drawing.Size(643, 244);
+            this.выдача_автомобилейDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_арендодателя";
-            this.dataGridViewTextBoxColumn1.HeaderText = "id_арендодателя";
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_клиента";
+            this.dataGridViewTextBoxColumn1.HeaderText = "id_клиента";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Фамилия";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Фамилия";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "id_арендодателя";
+            this.dataGridViewTextBoxColumn2.HeaderText = "id_арендодателя";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Имя";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Имя";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "id_выданного_автомобиля";
+            this.dataGridViewTextBoxColumn3.HeaderText = "id_выданного_автомобиля";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Отчество";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Отчество";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "id_автомобиля";
+            this.dataGridViewTextBoxColumn4.HeaderText = "id_автомобиля";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // Owner
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Описание";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Описание";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Дата";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Дата";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // Delivery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(442, 290);
-            this.Controls.Add(this.арендодательDataGridView);
-            this.Controls.Add(this.арендодательBindingNavigator);
-            this.Name = "Owner";
-            this.Text = "Арендодатель";
-            this.Load += new System.EventHandler(this.Owner_Load);
+            this.ClientSize = new System.Drawing.Size(643, 269);
+            this.Controls.Add(this.выдача_автомобилейDataGridView);
+            this.Controls.Add(this.выдача_автомобилейBindingNavigator);
+            this.Name = "Delivery";
+            this.Text = "Выдача";
+            this.Load += new System.EventHandler(this.Delivery_Load);
             ((System.ComponentModel.ISupportInitialize)(this.carsDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.арендодательBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.арендодательBindingNavigator)).EndInit();
-            this.арендодательBindingNavigator.ResumeLayout(false);
-            this.арендодательBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.арендодательDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.выдача_автомобилейBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.выдача_автомобилейBindingNavigator)).EndInit();
+            this.выдача_автомобилейBindingNavigator.ResumeLayout(false);
+            this.выдача_автомобилейBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.выдача_автомобилейDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,10 +288,10 @@
         #endregion
 
         private carsDataSet carsDataSet;
-        private System.Windows.Forms.BindingSource арендодательBindingSource;
-        private carsDataSetTableAdapters.АрендодательTableAdapter арендодательTableAdapter;
+        private System.Windows.Forms.BindingSource выдача_автомобилейBindingSource;
+        private carsDataSetTableAdapters.Выдача_автомобилейTableAdapter выдача_автомобилейTableAdapter;
         private carsDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator арендодательBindingNavigator;
+        private System.Windows.Forms.BindingNavigator выдача_автомобилейBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -288,11 +303,13 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton арендодательBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView арендодательDataGridView;
+        private System.Windows.Forms.ToolStripButton выдача_автомобилейBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView выдача_автомобилейDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }
