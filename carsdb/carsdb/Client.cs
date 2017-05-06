@@ -31,10 +31,5 @@ namespace carsdb
             this.клиентTableAdapter.Fill(this.carsDataSet.Клиент);
 
         }
-
-        private void клиентDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }
