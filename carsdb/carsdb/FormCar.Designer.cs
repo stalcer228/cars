@@ -29,28 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCar));
             System.Windows.Forms.Label id_автомобиляLabel;
             System.Windows.Forms.Label маркаLabel;
             System.Windows.Forms.Label ценаLabel;
             System.Windows.Forms.Label описаниеLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCar));
             this.carsDataSet = new carsdb.carsDataSet();
             this.автомобильBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.автомобильTableAdapter = new carsdb.carsDataSetTableAdapters.АвтомобильTableAdapter();
             this.tableAdapterManager = new carsdb.carsDataSetTableAdapters.TableAdapterManager();
             this.автомобильBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.автомобильBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.id_автомобиляTextBox = new System.Windows.Forms.TextBox();
             this.маркаTextBox = new System.Windows.Forms.TextBox();
             this.ценаTextBox = new System.Windows.Forms.TextBox();
@@ -64,6 +65,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.автомобильBindingNavigator)).BeginInit();
             this.автомобильBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // id_автомобиляLabel
+            // 
+            id_автомобиляLabel.AutoSize = true;
+            id_автомобиляLabel.Location = new System.Drawing.Point(12, 35);
+            id_автомобиляLabel.Name = "id_автомобиляLabel";
+            id_автомобиляLabel.Size = new System.Drawing.Size(82, 13);
+            id_автомобиляLabel.TabIndex = 1;
+            id_автомобиляLabel.Text = "id автомобиля:";
+            // 
+            // маркаLabel
+            // 
+            маркаLabel.AutoSize = true;
+            маркаLabel.Location = new System.Drawing.Point(12, 61);
+            маркаLabel.Name = "маркаLabel";
+            маркаLabel.Size = new System.Drawing.Size(43, 13);
+            маркаLabel.TabIndex = 3;
+            маркаLabel.Text = "Марка:";
+            // 
+            // ценаLabel
+            // 
+            ценаLabel.AutoSize = true;
+            ценаLabel.Location = new System.Drawing.Point(12, 87);
+            ценаLabel.Name = "ценаLabel";
+            ценаLabel.Size = new System.Drawing.Size(36, 13);
+            ценаLabel.TabIndex = 5;
+            ценаLabel.Text = "Цена:";
+            // 
+            // описаниеLabel
+            // 
+            описаниеLabel.AutoSize = true;
+            описаниеLabel.Location = new System.Drawing.Point(12, 113);
+            описаниеLabel.Name = "описаниеLabel";
+            описаниеLabel.Size = new System.Drawing.Size(60, 13);
+            описаниеLabel.TabIndex = 7;
+            описаниеLabel.Text = "Описание:";
             // 
             // carsDataSet
             // 
@@ -107,7 +144,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.автомобильBindingNavigatorSaveItem});
+            this.автомобильBindingNavigatorSaveItem,
+            this.toolStripButton1});
             this.автомобильBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.автомобильBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.автомобильBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -118,6 +156,31 @@
             this.автомобильBindingNavigator.Size = new System.Drawing.Size(558, 25);
             this.автомобильBindingNavigator.TabIndex = 0;
             this.автомобильBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -151,17 +214,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -169,7 +225,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -178,49 +234,32 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // автомобильBindingNavigatorSaveItem
             // 
             this.автомобильBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.автомобильBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("автомобильBindingNavigatorSaveItem.Image")));
             this.автомобильBindingNavigatorSaveItem.Name = "автомобильBindingNavigatorSaveItem";
-            this.автомобильBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.автомобильBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.автомобильBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.автомобильBindingNavigatorSaveItem.Click += new System.EventHandler(this.автомобильBindingNavigatorSaveItem_Click);
             // 
-            // id_автомобиляLabel
+            // toolStripButton1
             // 
-            id_автомобиляLabel.AutoSize = true;
-            id_автомобиляLabel.Location = new System.Drawing.Point(12, 35);
-            id_автомобиляLabel.Name = "id_автомобиляLabel";
-            id_автомобиляLabel.Size = new System.Drawing.Size(82, 13);
-            id_автомобиляLabel.TabIndex = 1;
-            id_автомобиляLabel.Text = "id автомобиля:";
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(58, 22);
+            this.toolStripButton1.Text = "Выбрать";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // id_автомобиляTextBox
             // 
@@ -230,15 +269,6 @@
             this.id_автомобиляTextBox.Size = new System.Drawing.Size(100, 20);
             this.id_автомобиляTextBox.TabIndex = 2;
             // 
-            // маркаLabel
-            // 
-            маркаLabel.AutoSize = true;
-            маркаLabel.Location = new System.Drawing.Point(12, 61);
-            маркаLabel.Name = "маркаLabel";
-            маркаLabel.Size = new System.Drawing.Size(43, 13);
-            маркаLabel.TabIndex = 3;
-            маркаLabel.Text = "Марка:";
-            // 
             // маркаTextBox
             // 
             this.маркаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автомобильBindingSource, "Марка", true));
@@ -247,15 +277,6 @@
             this.маркаTextBox.Size = new System.Drawing.Size(100, 20);
             this.маркаTextBox.TabIndex = 4;
             // 
-            // ценаLabel
-            // 
-            ценаLabel.AutoSize = true;
-            ценаLabel.Location = new System.Drawing.Point(12, 87);
-            ценаLabel.Name = "ценаLabel";
-            ценаLabel.Size = new System.Drawing.Size(36, 13);
-            ценаLabel.TabIndex = 5;
-            ценаLabel.Text = "Цена:";
-            // 
             // ценаTextBox
             // 
             this.ценаTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.автомобильBindingSource, "Цена", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "C2"));
@@ -263,15 +284,6 @@
             this.ценаTextBox.Name = "ценаTextBox";
             this.ценаTextBox.Size = new System.Drawing.Size(100, 20);
             this.ценаTextBox.TabIndex = 6;
-            // 
-            // описаниеLabel
-            // 
-            описаниеLabel.AutoSize = true;
-            описаниеLabel.Location = new System.Drawing.Point(12, 113);
-            описаниеLabel.Name = "описаниеLabel";
-            описаниеLabel.Size = new System.Drawing.Size(60, 13);
-            описаниеLabel.TabIndex = 7;
-            описаниеLabel.Text = "Описание:";
             // 
             // описаниеTextBox
             // 
@@ -331,5 +343,6 @@
         private System.Windows.Forms.TextBox маркаTextBox;
         private System.Windows.Forms.TextBox ценаTextBox;
         private System.Windows.Forms.TextBox описаниеTextBox;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

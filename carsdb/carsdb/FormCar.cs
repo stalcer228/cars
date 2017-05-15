@@ -12,6 +12,17 @@ namespace carsdb
 {
     public partial class FormCar : Form
     {
+        int idCurrent = -1;
+        public int ShowSelectForm(int id)
+        {
+            toolStripButton1.Visible = true;
+            idCurrent = id;
+            if (ShowDialog() == DialogResult.OK)
+                return
+                (int)((DataRowView)автомобильBindingSource.Current)["код_автомобиля"];
+            else
+                return -1;
+        }
         public FormCar()
         {
             InitializeComponent();
@@ -35,6 +46,16 @@ namespace carsdb
         private void автомобильDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
         }
     }
 }

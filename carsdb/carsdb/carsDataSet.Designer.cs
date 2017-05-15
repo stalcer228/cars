@@ -34,6 +34,14 @@ namespace carsdb {
         
         private КлиентDataTable tableКлиент;
         
+        private global::System.Data.DataRelation relationАвтомобиль_График_возврата;
+        
+        private global::System.Data.DataRelation relationКлиент_Выдача_автомобилей;
+        
+        private global::System.Data.DataRelation relationАрендодатель_Выдача_автомобилей;
+        
+        private global::System.Data.DataRelation relationГрафик_возврата_Выдача_автомобилей;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -290,6 +298,10 @@ namespace carsdb {
                     this.tableКлиент.InitVars();
                 }
             }
+            this.relationАвтомобиль_График_возврата = this.Relations["Автомобиль_График возврата"];
+            this.relationКлиент_Выдача_автомобилей = this.Relations["Клиент_Выдача автомобилей"];
+            this.relationАрендодатель_Выдача_автомобилей = this.Relations["Арендодатель_Выдача автомобилей"];
+            this.relationГрафик_возврата_Выдача_автомобилей = this.Relations["График возврата_Выдача автомобилей"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -310,6 +322,22 @@ namespace carsdb {
             base.Tables.Add(this.tableГрафик_возврата);
             this.tableКлиент = new КлиентDataTable();
             base.Tables.Add(this.tableКлиент);
+            this.relationАвтомобиль_График_возврата = new global::System.Data.DataRelation("Автомобиль_График возврата", new global::System.Data.DataColumn[] {
+                        this.tableАвтомобиль.id_автомобиляColumn}, new global::System.Data.DataColumn[] {
+                        this.tableГрафик_возврата.id_выданного_автомобиляColumn}, false);
+            this.Relations.Add(this.relationАвтомобиль_График_возврата);
+            this.relationКлиент_Выдача_автомобилей = new global::System.Data.DataRelation("Клиент_Выдача автомобилей", new global::System.Data.DataColumn[] {
+                        this.tableКлиент.id_клиентаColumn}, new global::System.Data.DataColumn[] {
+                        this.tableВыдача_автомобилей.id_клиентаColumn}, false);
+            this.Relations.Add(this.relationКлиент_Выдача_автомобилей);
+            this.relationАрендодатель_Выдача_автомобилей = new global::System.Data.DataRelation("Арендодатель_Выдача автомобилей", new global::System.Data.DataColumn[] {
+                        this.tableАрендодатель.id_арендодателяColumn}, new global::System.Data.DataColumn[] {
+                        this.tableВыдача_автомобилей.id_арендодателяColumn}, false);
+            this.Relations.Add(this.relationАрендодатель_Выдача_автомобилей);
+            this.relationГрафик_возврата_Выдача_автомобилей = new global::System.Data.DataRelation("График возврата_Выдача автомобилей", new global::System.Data.DataColumn[] {
+                        this.tableГрафик_возврата.id_выданного_автомобиляColumn}, new global::System.Data.DataColumn[] {
+                        this.tableВыдача_автомобилей.id_выданного_автомобиляColumn}, false);
+            this.Relations.Add(this.relationГрафик_возврата_Выдача_автомобилей);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2104,6 +2132,17 @@ namespace carsdb {
             public void SetОписаниеNull() {
                 this[this.tableАвтомобиль.ОписаниеColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public График_возвратаRow[] GetГрафик_возвратаRows() {
+                if ((this.Table.ChildRelations["Автомобиль_График возврата"] == null)) {
+                    return new График_возвратаRow[0];
+                }
+                else {
+                    return ((График_возвратаRow[])(base.GetChildRows(this.Table.ChildRelations["Автомобиль_График возврата"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2161,6 +2200,17 @@ namespace carsdb {
                 }
                 set {
                     this[this.tableАрендодатель.ОтчествоColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Выдача_автомобилейRow[] GetВыдача_автомобилейRows() {
+                if ((this.Table.ChildRelations["Арендодатель_Выдача автомобилей"] == null)) {
+                    return new Выдача_автомобилейRow[0];
+                }
+                else {
+                    return ((Выдача_автомобилейRow[])(base.GetChildRows(this.Table.ChildRelations["Арендодатель_Выдача автомобилей"])));
                 }
             }
         }
@@ -2257,6 +2307,39 @@ namespace carsdb {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public КлиентRow КлиентRow {
+                get {
+                    return ((КлиентRow)(this.GetParentRow(this.Table.ParentRelations["Клиент_Выдача автомобилей"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Клиент_Выдача автомобилей"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public АрендодательRow АрендодательRow {
+                get {
+                    return ((АрендодательRow)(this.GetParentRow(this.Table.ParentRelations["Арендодатель_Выдача автомобилей"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Арендодатель_Выдача автомобилей"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public График_возвратаRow График_возвратаRow {
+                get {
+                    return ((График_возвратаRow)(this.GetParentRow(this.Table.ParentRelations["График возврата_Выдача автомобилей"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["График возврата_Выдача автомобилей"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsОписаниеNull() {
                 return this.IsNull(this.tableВыдача_автомобилей.ОписаниеColumn);
             }
@@ -2345,6 +2428,17 @@ namespace carsdb {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public АвтомобильRow АвтомобильRow {
+                get {
+                    return ((АвтомобильRow)(this.GetParentRow(this.Table.ParentRelations["Автомобиль_График возврата"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Автомобиль_График возврата"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsОписаниеNull() {
                 return this.IsNull(this.tableГрафик_возврата.ОписаниеColumn);
             }
@@ -2353,6 +2447,17 @@ namespace carsdb {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetОписаниеNull() {
                 this[this.tableГрафик_возврата.ОписаниеColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Выдача_автомобилейRow[] GetВыдача_автомобилейRows() {
+                if ((this.Table.ChildRelations["График возврата_Выдача автомобилей"] == null)) {
+                    return new Выдача_автомобилейRow[0];
+                }
+                else {
+                    return ((Выдача_автомобилейRow[])(base.GetChildRows(this.Table.ChildRelations["График возврата_Выдача автомобилей"])));
+                }
             }
         }
         
@@ -2462,6 +2567,17 @@ namespace carsdb {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetАдресNull() {
                 this[this.tableКлиент.АдресColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Выдача_автомобилейRow[] GetВыдача_автомобилейRows() {
+                if ((this.Table.ChildRelations["Клиент_Выдача автомобилей"] == null)) {
+                    return new Выдача_автомобилейRow[0];
+                }
+                else {
+                    return ((Выдача_автомобилейRow[])(base.GetChildRows(this.Table.ChildRelations["Клиент_Выдача автомобилей"])));
+                }
             }
         }
         
@@ -4756,15 +4872,6 @@ SELECT id_клиента, Фамилия, Имя, Отчество, Водите
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._выдача_автомобилейTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Выдача_автомобилей.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._выдача_автомобилейTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._график_возвратаTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.График_возврата.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -4780,6 +4887,15 @@ SELECT id_клиента, Фамилия, Имя, Отчество, Водите
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._клиентTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._выдача_автомобилейTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Выдача_автомобилей.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._выдача_автомобилейTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -4809,14 +4925,6 @@ SELECT id_клиента, Фамилия, Имя, Отчество, Водите
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._выдача_автомобилейTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Выдача_автомобилей.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._выдача_автомобилейTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._график_возвратаTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.График_возврата.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -4833,6 +4941,14 @@ SELECT id_клиента, Фамилия, Имя, Отчество, Водите
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._выдача_автомобилейTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Выдача_автомобилей.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._выдача_автомобилейTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -4843,6 +4959,14 @@ SELECT id_клиента, Фамилия, Имя, Отчество, Водите
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(carsDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._выдача_автомобилейTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Выдача_автомобилей.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._выдача_автомобилейTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._клиентTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Клиент.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -4856,14 +4980,6 @@ SELECT id_клиента, Фамилия, Имя, Отчество, Водите
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._график_возвратаTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._выдача_автомобилейTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Выдача_автомобилей.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._выдача_автомобилейTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
