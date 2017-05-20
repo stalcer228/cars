@@ -31,5 +31,23 @@ namespace carsdb
             this.арендодательTableAdapter.Fill(this.carsDataSet.Арендодатель);
 
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
+
+        int idCurrent = -1;
+        public int ShowSelectForm(int id)
+        {
+            toolStripButton1.Visible = true;
+            idCurrent = id;
+            if (ShowDialog() == DialogResult.OK)
+                return
+                (int)((DataRowView)арендодательBindingSource.Current)["id_арендодателя"];
+            else
+                return -1;
+        }
     }
+    
 }

@@ -287,7 +287,7 @@
             this.график_возвратаDataGridView.DataSource = this.график_возвратаBindingSource;
             this.график_возвратаDataGridView.Location = new System.Drawing.Point(0, 185);
             this.график_возвратаDataGridView.Name = "график_возвратаDataGridView";
-            this.график_возвратаDataGridView.Size = new System.Drawing.Size(444, 94);
+            this.график_возвратаDataGridView.Size = new System.Drawing.Size(444, 173);
             this.график_возвратаDataGridView.TabIndex = 1;
             this.график_возвратаDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.график_возвратаDataGridView_CellContentClick);
             // 
@@ -351,7 +351,7 @@
             // checkBoxFind
             // 
             this.checkBoxFind.AutoSize = true;
-            this.checkBoxFind.Location = new System.Drawing.Point(636, 120);
+            this.checkBoxFind.Location = new System.Drawing.Point(453, 3);
             this.checkBoxFind.Name = "checkBoxFind";
             this.checkBoxFind.Size = new System.Drawing.Size(66, 17);
             this.checkBoxFind.TabIndex = 10;

@@ -35,18 +35,18 @@
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMain = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.автомобильToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.carsDataSet = new carsdb.carsDataSet();
-            this.арендодательBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.арендодательTableAdapter = new carsdb.carsDataSetTableAdapters.АрендодательTableAdapter();
-            this.tableAdapterManager = new carsdb.carsDataSetTableAdapters.TableAdapterManager();
             this.арендодательToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.клиентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.графикВозвратаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выдачаАвтомобилейToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMain = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.carsDataSet = new carsdb.carsDataSet();
+            this.арендодательBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.арендодательTableAdapter = new carsdb.carsDataSetTableAdapters.АрендодательTableAdapter();
+            this.tableAdapterManager = new carsdb.carsDataSetTableAdapters.TableAdapterManager();
             this.menuStripMain.SuspendLayout();
             this.toolStripMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carsDataSet)).BeginInit();
@@ -103,67 +103,12 @@
             this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.справочникиToolStripMenuItem.Text = "Справочники";
             // 
-            // toolStripMain
-            // 
-            this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2});
-            this.toolStripMain.Location = new System.Drawing.Point(0, 24);
-            this.toolStripMain.Name = "toolStripMain";
-            this.toolStripMain.Size = new System.Drawing.Size(642, 25);
-            this.toolStripMain.TabIndex = 1;
-            this.toolStripMain.Text = "toolStrip1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
-            // 
             // автомобильToolStripMenuItem
             // 
             this.автомобильToolStripMenuItem.Name = "автомобильToolStripMenuItem";
             this.автомобильToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.автомобильToolStripMenuItem.Text = "Автомобиль";
             this.автомобильToolStripMenuItem.Click += new System.EventHandler(this.автомобильToolStripMenuItem_Click);
-            // 
-            // carsDataSet
-            // 
-            this.carsDataSet.DataSetName = "carsDataSet";
-            this.carsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // арендодательBindingSource
-            // 
-            this.арендодательBindingSource.DataMember = "Арендодатель";
-            this.арендодательBindingSource.DataSource = this.carsDataSet;
-            // 
-            // арендодательTableAdapter
-            // 
-            this.арендодательTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.UpdateOrder = carsdb.carsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.АвтомобильTableAdapter = null;
-            this.tableAdapterManager.АрендодательTableAdapter = this.арендодательTableAdapter;
-            this.tableAdapterManager.Выдача_автомобилейTableAdapter = null;
-            this.tableAdapterManager.График_возвратаTableAdapter = null;
-            this.tableAdapterManager.КлиентTableAdapter = null;
             // 
             // арендодательToolStripMenuItem
             // 
@@ -192,6 +137,63 @@
             this.выдачаАвтомобилейToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
             this.выдачаАвтомобилейToolStripMenuItem.Text = "Выдача автомобилей";
             this.выдачаАвтомобилейToolStripMenuItem.Click += new System.EventHandler(this.выдачаАвтомобилейToolStripMenuItem_Click);
+            // 
+            // toolStripMain
+            // 
+            this.toolStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2});
+            this.toolStripMain.Location = new System.Drawing.Point(0, 24);
+            this.toolStripMain.Name = "toolStripMain";
+            this.toolStripMain.Size = new System.Drawing.Size(642, 25);
+            this.toolStripMain.TabIndex = 1;
+            this.toolStripMain.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.ToolTipText = "Выход";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.ToolTipText = "О программе";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // carsDataSet
+            // 
+            this.carsDataSet.DataSetName = "carsDataSet";
+            this.carsDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // арендодательBindingSource
+            // 
+            this.арендодательBindingSource.DataMember = "Арендодатель";
+            this.арендодательBindingSource.DataSource = this.carsDataSet;
+            // 
+            // арендодательTableAdapter
+            // 
+            this.арендодательTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = carsdb.carsDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.АвтомобильTableAdapter = null;
+            this.tableAdapterManager.АрендодательTableAdapter = this.арендодательTableAdapter;
+            this.tableAdapterManager.Выдача_автомобилейTableAdapter = null;
+            this.tableAdapterManager.График_возвратаTableAdapter = null;
+            this.tableAdapterManager.КлиентTableAdapter = null;
             // 
             // FormMain
             // 

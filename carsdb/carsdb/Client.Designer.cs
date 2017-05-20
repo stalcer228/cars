@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Client));
             System.Windows.Forms.Label id_клиентаLabel;
             System.Windows.Forms.Label фамилияLabel;
             System.Windows.Forms.Label имяLabel;
@@ -37,22 +36,23 @@
             System.Windows.Forms.Label водительские_праваLabel;
             System.Windows.Forms.Label адресLabel;
             System.Windows.Forms.Label паспортLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Client));
             this.carsDataSet = new carsdb.carsDataSet();
             this.клиентBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.клиентTableAdapter = new carsdb.carsDataSetTableAdapters.КлиентTableAdapter();
             this.tableAdapterManager = new carsdb.carsDataSetTableAdapters.TableAdapterManager();
             this.клиентBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.клиентBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.id_клиентаTextBox = new System.Windows.Forms.TextBox();
             this.фамилияTextBox = new System.Windows.Forms.TextBox();
@@ -61,6 +61,7 @@
             this.водительские_праваTextBox = new System.Windows.Forms.TextBox();
             this.адресTextBox = new System.Windows.Forms.TextBox();
             this.паспортTextBox = new System.Windows.Forms.TextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             id_клиентаLabel = new System.Windows.Forms.Label();
             фамилияLabel = new System.Windows.Forms.Label();
             имяLabel = new System.Windows.Forms.Label();
@@ -73,6 +74,69 @@
             ((System.ComponentModel.ISupportInitialize)(this.клиентBindingNavigator)).BeginInit();
             this.клиентBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // id_клиентаLabel
+            // 
+            id_клиентаLabel.AutoSize = true;
+            id_клиентаLabel.Location = new System.Drawing.Point(12, 35);
+            id_клиентаLabel.Name = "id_клиентаLabel";
+            id_клиентаLabel.Size = new System.Drawing.Size(62, 13);
+            id_клиентаLabel.TabIndex = 1;
+            id_клиентаLabel.Text = "id клиента:";
+            // 
+            // фамилияLabel
+            // 
+            фамилияLabel.AutoSize = true;
+            фамилияLabel.Location = new System.Drawing.Point(12, 61);
+            фамилияLabel.Name = "фамилияLabel";
+            фамилияLabel.Size = new System.Drawing.Size(59, 13);
+            фамилияLabel.TabIndex = 3;
+            фамилияLabel.Text = "Фамилия:";
+            // 
+            // имяLabel
+            // 
+            имяLabel.AutoSize = true;
+            имяLabel.Location = new System.Drawing.Point(12, 87);
+            имяLabel.Name = "имяLabel";
+            имяLabel.Size = new System.Drawing.Size(32, 13);
+            имяLabel.TabIndex = 5;
+            имяLabel.Text = "Имя:";
+            // 
+            // отчествоLabel
+            // 
+            отчествоLabel.AutoSize = true;
+            отчествоLabel.Location = new System.Drawing.Point(12, 113);
+            отчествоLabel.Name = "отчествоLabel";
+            отчествоLabel.Size = new System.Drawing.Size(57, 13);
+            отчествоLabel.TabIndex = 7;
+            отчествоLabel.Text = "Отчество:";
+            // 
+            // водительские_праваLabel
+            // 
+            водительские_праваLabel.AutoSize = true;
+            водительские_праваLabel.Location = new System.Drawing.Point(12, 139);
+            водительские_праваLabel.Name = "водительские_праваLabel";
+            водительские_праваLabel.Size = new System.Drawing.Size(115, 13);
+            водительские_праваLabel.TabIndex = 9;
+            водительские_праваLabel.Text = "Водительские права:";
+            // 
+            // адресLabel
+            // 
+            адресLabel.AutoSize = true;
+            адресLabel.Location = new System.Drawing.Point(12, 165);
+            адресLabel.Name = "адресLabel";
+            адресLabel.Size = new System.Drawing.Size(41, 13);
+            адресLabel.TabIndex = 11;
+            адресLabel.Text = "Адрес:";
+            // 
+            // паспортLabel
+            // 
+            паспортLabel.AutoSize = true;
+            паспортLabel.Location = new System.Drawing.Point(12, 191);
+            паспортLabel.Name = "паспортLabel";
+            паспортLabel.Size = new System.Drawing.Size(53, 13);
+            паспортLabel.TabIndex = 13;
+            паспортLabel.Text = "Паспорт:";
             // 
             // carsDataSet
             // 
@@ -116,7 +180,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.клиентBindingNavigatorSaveItem});
+            this.клиентBindingNavigatorSaveItem,
+            this.toolStripButton1});
             this.клиентBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.клиентBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.клиентBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -124,9 +189,34 @@
             this.клиентBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.клиентBindingNavigator.Name = "клиентBindingNavigator";
             this.клиентBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.клиентBindingNavigator.Size = new System.Drawing.Size(312, 25);
+            this.клиентBindingNavigator.Size = new System.Drawing.Size(375, 25);
             this.клиентBindingNavigator.TabIndex = 0;
             this.клиентBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -160,17 +250,10 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 15);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -178,7 +261,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -187,49 +270,22 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
             // клиентBindingNavigatorSaveItem
             // 
             this.клиентBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.клиентBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("клиентBindingNavigatorSaveItem.Image")));
             this.клиентBindingNavigatorSaveItem.Name = "клиентBindingNavigatorSaveItem";
-            this.клиентBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
+            this.клиентBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.клиентBindingNavigatorSaveItem.Text = "Сохранить данные";
             this.клиентBindingNavigatorSaveItem.Click += new System.EventHandler(this.клиентBindingNavigatorSaveItem_Click);
-            // 
-            // id_клиентаLabel
-            // 
-            id_клиентаLabel.AutoSize = true;
-            id_клиентаLabel.Location = new System.Drawing.Point(12, 35);
-            id_клиентаLabel.Name = "id_клиентаLabel";
-            id_клиентаLabel.Size = new System.Drawing.Size(62, 13);
-            id_клиентаLabel.TabIndex = 1;
-            id_клиентаLabel.Text = "id клиента:";
             // 
             // id_клиентаTextBox
             // 
@@ -239,15 +295,6 @@
             this.id_клиентаTextBox.Size = new System.Drawing.Size(100, 20);
             this.id_клиентаTextBox.TabIndex = 2;
             // 
-            // фамилияLabel
-            // 
-            фамилияLabel.AutoSize = true;
-            фамилияLabel.Location = new System.Drawing.Point(12, 61);
-            фамилияLabel.Name = "фамилияLabel";
-            фамилияLabel.Size = new System.Drawing.Size(59, 13);
-            фамилияLabel.TabIndex = 3;
-            фамилияLabel.Text = "Фамилия:";
-            // 
             // фамилияTextBox
             // 
             this.фамилияTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.клиентBindingSource, "Фамилия", true));
@@ -255,15 +302,6 @@
             this.фамилияTextBox.Name = "фамилияTextBox";
             this.фамилияTextBox.Size = new System.Drawing.Size(100, 20);
             this.фамилияTextBox.TabIndex = 4;
-            // 
-            // имяLabel
-            // 
-            имяLabel.AutoSize = true;
-            имяLabel.Location = new System.Drawing.Point(12, 87);
-            имяLabel.Name = "имяLabel";
-            имяLabel.Size = new System.Drawing.Size(32, 13);
-            имяLabel.TabIndex = 5;
-            имяLabel.Text = "Имя:";
             // 
             // имяTextBox
             // 
@@ -273,15 +311,6 @@
             this.имяTextBox.Size = new System.Drawing.Size(100, 20);
             this.имяTextBox.TabIndex = 6;
             // 
-            // отчествоLabel
-            // 
-            отчествоLabel.AutoSize = true;
-            отчествоLabel.Location = new System.Drawing.Point(12, 113);
-            отчествоLabel.Name = "отчествоLabel";
-            отчествоLabel.Size = new System.Drawing.Size(57, 13);
-            отчествоLabel.TabIndex = 7;
-            отчествоLabel.Text = "Отчество:";
-            // 
             // отчествоTextBox
             // 
             this.отчествоTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.клиентBindingSource, "Отчество", true));
@@ -289,15 +318,6 @@
             this.отчествоTextBox.Name = "отчествоTextBox";
             this.отчествоTextBox.Size = new System.Drawing.Size(100, 20);
             this.отчествоTextBox.TabIndex = 8;
-            // 
-            // водительские_праваLabel
-            // 
-            водительские_праваLabel.AutoSize = true;
-            водительские_праваLabel.Location = new System.Drawing.Point(12, 139);
-            водительские_праваLabel.Name = "водительские_праваLabel";
-            водительские_праваLabel.Size = new System.Drawing.Size(115, 13);
-            водительские_праваLabel.TabIndex = 9;
-            водительские_праваLabel.Text = "Водительские права:";
             // 
             // водительские_праваTextBox
             // 
@@ -307,15 +327,6 @@
             this.водительские_праваTextBox.Size = new System.Drawing.Size(100, 20);
             this.водительские_праваTextBox.TabIndex = 10;
             // 
-            // адресLabel
-            // 
-            адресLabel.AutoSize = true;
-            адресLabel.Location = new System.Drawing.Point(12, 165);
-            адресLabel.Name = "адресLabel";
-            адресLabel.Size = new System.Drawing.Size(41, 13);
-            адресLabel.TabIndex = 11;
-            адресLabel.Text = "Адрес:";
-            // 
             // адресTextBox
             // 
             this.адресTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.клиентBindingSource, "Адрес", true));
@@ -323,15 +334,6 @@
             this.адресTextBox.Name = "адресTextBox";
             this.адресTextBox.Size = new System.Drawing.Size(100, 20);
             this.адресTextBox.TabIndex = 12;
-            // 
-            // паспортLabel
-            // 
-            паспортLabel.AutoSize = true;
-            паспортLabel.Location = new System.Drawing.Point(12, 191);
-            паспортLabel.Name = "паспортLabel";
-            паспортLabel.Size = new System.Drawing.Size(53, 13);
-            паспортLabel.TabIndex = 13;
-            паспортLabel.Text = "Паспорт:";
             // 
             // паспортTextBox
             // 
@@ -341,11 +343,21 @@
             this.паспортTextBox.Size = new System.Drawing.Size(100, 20);
             this.паспортTextBox.TabIndex = 14;
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(63, 22);
+            this.toolStripButton1.Text = "Добавить";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(312, 263);
+            this.ClientSize = new System.Drawing.Size(375, 263);
             this.Controls.Add(id_клиентаLabel);
             this.Controls.Add(this.id_клиентаTextBox);
             this.Controls.Add(фамилияLabel);
@@ -400,5 +412,6 @@
         private System.Windows.Forms.TextBox водительские_праваTextBox;
         private System.Windows.Forms.TextBox адресTextBox;
         private System.Windows.Forms.TextBox паспортTextBox;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }

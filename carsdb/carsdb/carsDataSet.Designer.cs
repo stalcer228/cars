@@ -615,7 +615,6 @@ namespace carsdb {
                 this.columnid_автомобиля.AutoIncrement = true;
                 this.columnid_автомобиля.AutoIncrementSeed = 1;
                 this.columnid_автомобиля.AllowDBNull = false;
-                this.columnid_автомобиля.ReadOnly = true;
                 this.columnid_автомобиля.Unique = true;
                 this.columnМарка.AllowDBNull = false;
                 this.columnМарка.MaxLength = 255;
@@ -1269,7 +1268,6 @@ namespace carsdb {
                 this.columnid_автомобиля.AutoIncrement = true;
                 this.columnid_автомобиля.AutoIncrementSeed = 1;
                 this.columnid_автомобиля.AllowDBNull = false;
-                this.columnid_автомобиля.ReadOnly = true;
                 this.columnОписание.MaxLength = 255;
             }
             
@@ -1572,7 +1570,6 @@ namespace carsdb {
                 this.columnid_выданного_автомобиля.AutoIncrement = true;
                 this.columnid_выданного_автомобиля.AutoIncrementSeed = 1;
                 this.columnid_выданного_автомобиля.AllowDBNull = false;
-                this.columnid_выданного_автомобиля.ReadOnly = true;
                 this.columnid_выданного_автомобиля.Unique = true;
                 this.columnИтоговая_цена.AllowDBNull = false;
                 this.columnОписание.MaxLength = 255;
@@ -1920,7 +1917,6 @@ namespace carsdb {
                 this.columnid_клиента.AutoIncrement = true;
                 this.columnid_клиента.AutoIncrementSeed = 1;
                 this.columnid_клиента.AllowDBNull = false;
-                this.columnid_клиента.ReadOnly = true;
                 this.columnid_клиента.Unique = true;
                 this.columnФамилия.AllowDBNull = false;
                 this.columnФамилия.MaxLength = 255;
